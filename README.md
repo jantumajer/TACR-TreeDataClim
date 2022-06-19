@@ -31,4 +31,4 @@ Skripts were applied in the following order:
 
 
 3] `skript_regressions.R`
-- Fitting linear regression models explaining EGR of given year by site conditions
+- Fitting linear regression models explaining EGR of a given year by site conditions
