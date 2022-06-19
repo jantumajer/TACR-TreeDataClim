@@ -8,8 +8,10 @@ Skripts were applied in the following order:
 0a] 'skript_popisne_statistiky.R'
 - Basic descriptive statistics for each chronology - mean RW, mean age, first and last year
 
+
 0b] 'climadiagrams_facet.R'
 - Plotting climatic diagrams for years of extreme growth reduction
+
 
 1] 'skript_pointeryF_imploctable.R'
 #### The crucial script calculating EGR based on defined approach:
@@ -23,8 +25,10 @@ Skripts were applied in the following order:
 - All years with observed EGR exceeding critical threshold for 40-years reccurence are marked
 - Legacy effects: If there are 2-5 consecutive years with EGR exceeding a 40-years threshold, their cumulative value is appended to the first year 
 
+
 2] 'skript_pointery_vyber_f1.R'
 - Plotting diagnostic maps with distribution of responding and nonresponding sites for each year and species
+
 
 3] 'skript_regressions.R'
 - Fitting linear regression models explaining EGR of given year by site conditions
