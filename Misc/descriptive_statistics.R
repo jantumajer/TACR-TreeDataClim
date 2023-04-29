@@ -1,8 +1,13 @@
-# This is R-script to calculate basic descriptive statistics for each site
+###
+### This is R-script to calculate basic descriptive statistics of tree-ring width series for each site ###
+###
+
 # Reguired open-source packages:
 library(dplR);library(readxl); library(base); library(pointRes)
 # Reguired input files
 SITE <- read.csv("sites.csv")
+
+############################
 
 parametry <- data.frame(siteco = SITE$site_code, MeanRingWidth = NA, MeanAge = NA, FirstYear = NA, LastYear = NA)
 
