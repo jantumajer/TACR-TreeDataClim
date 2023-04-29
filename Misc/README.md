@@ -1,6 +1,6 @@
 # Miscellaneous functions 
 
-0a] `skript_popisne_statistiky.R`
+0a] `descriptive_statistics.R`
 - Basic descriptive statistics for each chronology - mean RW, mean age, first and last year
 
 
