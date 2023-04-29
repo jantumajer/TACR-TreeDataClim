@@ -1,4 +1,14 @@
+###
+### This is R-script to calculate basic descriptive statistics of tree-ring width series for each site ###
+###
+
+# Reguired open-source packages:
 library(dplR);library(readxl); library(base); library(pointRes)
+# Reguired input files
+# Site tree-ring width series in *.rwl format
+# Site metadata
+
+############################
 
 SITE <- read.csv("E:/TACR/zchron_TestData2/META/data_april2_withCZU.csv")
 parametry <- data.frame(siteco = SITE$site_code, a = NA, r = NA, negative.spline = NA, replication.less.5 = NA, shorter.than.40 = NA)
