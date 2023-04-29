@@ -9,7 +9,7 @@ library(dplR);library(readxl); library(base); library(pointRes)
 # Site metadata
 
 ############################
-SITE <- read.csv("sites.csv")
+SITE <- read.csv("meta_github.csv")
 
 parametry <- data.frame(siteco = SITE$site_code, MeanRingWidth = NA, MeanAge = NA, FirstYear = NA, LastYear = NA)
 
