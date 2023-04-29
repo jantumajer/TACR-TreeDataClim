@@ -6,7 +6,7 @@ Skripts were applied in the following order:
 - Filtering out spurious series: series whose 30-years spline gets negative
 - Filtering out non-robust sites: replication lower than 5 trees OR shorter than 40 years
 - Calculation of z-chron chronology from detrended series (30-years spline) for the period since 1870
-- z-transformed site chronology is subsetted to include only the negative pointers and ranked according to the intensity of the pointer (1 = largest deviation)
+- z-transformed site chronology is subset to include only the negative pointers and ranked according to the intensity of the pointer (1 = largest deviation)
 - Ranking of the intensity of the pointer is converted into recurrence frequency (frequency = ranking/chronology length)
 - Relationship between reccurence frequency and pointer intensity (EGRZ) is smoothed using exponetnial
 - The critical value of pointer intensity (EGRZ) for events with recurrence interval > 40 years is determined based on the exponetial equation
