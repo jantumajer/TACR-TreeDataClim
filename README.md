@@ -4,11 +4,11 @@
 The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
 
 The functions were developed to process tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
-- Charles University, Faculty of Science, [Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
-- Department of Forest Ecology, Silva Tarouca Research Institute, [Blue Cat Team](https://pralesy.cz/lide)
+- [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
+- [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
 - Forestry and Game Management Research Institute
 - Mendel University in Brno, Faculty of Forestry and Wood Technology
-- University of Life Science, Faculty of Forestry and Wood Science, [Department of Forest Ecology](https://www.remoteforests.org/?language=en)
+- [University of Life Science, Faculty of Forestry and Wood Science, Department of Forest Ecology](https://www.remoteforests.org/?language=en)
 - Institute of Botany of the Czech Academy of Sciences
 - Jan Evangelista Purkyně University, Faculty of Environment
 
