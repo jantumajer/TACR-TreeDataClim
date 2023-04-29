@@ -12,7 +12,7 @@ The functions were developed to process tree-ring width series stored in TreeDat
 - Institute of Botany of the Czech Academy of Sciences
 - Jan Evangelista Purkyně University, Faculty of Environment
 
-The development of modified version of the VS-Lite process-based model of wood formation was based on Octave codes of the original model made available by Suzan Tolwinski-Ward (https://www.ncei.noaa.gov/access/paleo-search/study/9894)
+The development of the modified version of the VS-Lite process-based model of wood formation was based on Octave codes of the original model made available by Suzan Tolwinski-Ward (https://www.ncei.noaa.gov/access/paleo-search/study/9894)
 
 ### Contact and bug reporting
 Jan Tumajer, Charles University, Faculty of Science
