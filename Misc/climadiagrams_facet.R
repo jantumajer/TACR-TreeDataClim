@@ -68,8 +68,8 @@ graph <- ggplot(data = AGG.ALL[AGG.ALL$YEAR > 1981,]) +
   geom_bar(aes(y = Prec/10, x = Month, alpha = PERIOD), fill = "blue", stat = "identity", position = position_dodge())+
   geom_line(aes(y = Temp, x = Month, alpha = PERIOD), size = 0.5, col = "red")+
   scale_alpha_manual(values = c(0.3, 1.0)) +
-  scale_x_continuous("Mìsíc", breaks = c(1:12))+
-  scale_y_continuous("Teplota [°C]", limits = c(-8,25), breaks = c(-0,10,20), sec.axis = sec_axis(trans = ~.*10, name = "Srážky [mm]",breaks = c(0, 100, 200)))+
+  scale_x_continuous("MÃ¬sÃ­c", breaks = c(1:12))+
+  scale_y_continuous("Teplota [Â°C]", limits = c(-8,25), breaks = c(-0,10,20), sec.axis = sec_axis(trans = ~.*10, name = "SrÃ¡Å¾ky [mm]",breaks = c(0, 100, 200)))+
   facet_grid(.~ factor(YEAR))+
   theme_classic() + 
   theme(text=element_text(family="Century Gothic"),
