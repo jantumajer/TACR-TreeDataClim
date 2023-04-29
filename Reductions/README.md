@@ -13,7 +13,7 @@ Skripts were applied in the following order:
 - All years with observed EGR exceeding critical threshold for 40-years reccurence are marked
 - Legacy effects: If there are 2-5 consecutive years with EGR exceeding a 40-years threshold, their cumulative value is appended to the first year 
 
-Reference: `Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka, O., Svoboda, M., 2022. Trends in climatically driven extreme growth reductions of Picea abies and Pinus sylvestris in Central Europe. Global Change Biology 28, 557–570. https://doi.org/10.1111/gcb.15922`
+Reference: *Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka, O., Svoboda, M., 2022. Trends in climatically driven extreme growth reductions of Picea abies and Pinus sylvestris in Central Europe. Global Change Biology 28, 557–570. https://doi.org/10.1111/gcb.15922*
 
 2] `skript_pointery_vyber_f1.R`
 - Plotting diagnostic maps with distribution of responding and nonresponding sites for each year and species
