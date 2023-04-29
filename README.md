@@ -1,5 +1,23 @@
 # TACR-TreeDataClim
-R scripts used to process data in TACR TreeDataClim project
+
+### Acknowledgements and credits
+This package contains scripts and functions developed under the project funded by TAČR SS03010134 "Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)". 
+
+The functions were developed to process tree-ring width series stored in TreeDataClim database. The contributors of the data into this database include:
+- Charles University, Faculty of Science, Working group of Dendroecology (https://web.natur.cuni.cz/physgeo/dendro/)
+- Department of Forest Ecology, Silva Tarouca Research Institute
+- Forestry and Game Management Research Institute
+- Mendel University in Brno, Faculty of Forestry and Wood Technology
+- University of Life Science, Faculty of Forestry and Wood Science
+- Institute of Botany of the Czech Academy of Sciences
+- Jan Evangelista Purkyně University, Faculty of Environment
+
+The development of modified version of the VS-Lite process-based model of wood formation was based on Octave codes of the original model made available by Suzan Tolwinski-Ward (https://www.ncei.noaa.gov/access/paleo-search/study/9894)
+
+### Contact and bug reporting
+Jan Tumajer, Charles University, Faculty of Science
+tumajerj@natur.cuni.cz
+
 
 
 ### Production of extreme growth reductions maps (EGR)
