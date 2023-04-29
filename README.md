@@ -3,8 +3,8 @@
 ### Acknowledgements and credits
 This package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
 
-The functions were developed to process tree-ring width series stored in TreeDataClim database (https://treedataclim.cz/). The contributors of the data into this database include:
-- Charles University, Faculty of Science, Working group of Dendroecology (https://web.natur.cuni.cz/physgeo/dendro/)
+The functions were developed to process tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
+- Charles University, Faculty of Science, [Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
 - Department of Forest Ecology, Silva Tarouca Research Institute
 - Forestry and Game Management Research Institute
 - Mendel University in Brno, Faculty of Forestry and Wood Technology
@@ -12,7 +12,7 @@ The functions were developed to process tree-ring width series stored in TreeDat
 - Institute of Botany of the Czech Academy of Sciences
 - Jan Evangelista Purkyně University, Faculty of Environment
 
-The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at NOAA (https://www.ncei.noaa.gov/access/paleo-search/study/9894)
+The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894)
 
 ### Functionality
 This package represents a compilation of a stand-alone functions that were developed to process tree-ring width data following the methodology of TreeDataClim project. The individual groups of functions are as follows:
@@ -20,7 +20,7 @@ This package represents a compilation of a stand-alone functions that were devel
 - `Reductions` : functions to identify, eveluate, and extrapolate events of extreme growth reductions
 - `Limitations` : process-based model of intra-annual wood formation and its application to assess the type and the intensity of climatic limitation of wood formation
 - `Trends` : functions to quantify recent growth trends and to extrapolate their patterns across space
-All functions were developed in R programming language (https://www.r-project.org/) except the VS-Lite process-based model of wood formation, which is written in Octave (https://octave.org/). Both languages are open-source. We recommend to use the latest versions of both programming environments with our scripts.
+All functions were developed in [R programming language](https://www.r-project.org/) except the VS-Lite process-based model of wood formation, which is written in [Octave](https://octave.org/). Both languages are open-source. We recommend to use the latest versions of both programming environments with our scripts.
 
 ### Inputs
 Individual functions serve to process tree-ring width data following the methodology developed as a part of TreeDataClim project. Individual inputs differ depending on each function and are indicated at the beggining of each script. The example format of each input file can be found in the `Input` folder. 
