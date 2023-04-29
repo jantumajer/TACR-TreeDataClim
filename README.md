@@ -1,9 +1,7 @@
 # TreeDataClim Package
 
-### Acknowledgements and credits
-The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
-
-The functions were developed to process tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
+### Team
+Functions presented in this package were developed for the assessment of growth trends, climatic limitations, and the identification of main growth reductions for dominant forest tree species across the Czech Republic. Their functionality was specifically designed for processing tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
 - [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
 - [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
 - Forestry and Game Management Research Institute
@@ -12,7 +10,10 @@ The functions were developed to process tree-ring width series stored in [TreeDa
 - Institute of Botany of the Czech Academy of Sciences
 - Jan Evangelista Purkyně University, Faculty of Environment
 
-The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894)
+### Acknowledgements and credits
+The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
+
+The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions take use of few publicly-available packages contributing to specific steps of data processing and charts' plotting. We are gratefull to all authors of these packages for making them freely available.
 
 ### Functionality
 This package represents a compilation of a stand-alone functions that were developed to process tree-ring width data following the methodology of TreeDataClim project. The individual groups of functions are as follows:
