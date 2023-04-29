@@ -1,4 +1,4 @@
-# TACR-TreeDataClim
+# TreeDataClim Package
 
 ### Acknowledgements and credits
 This package contains scripts and functions developed under the project funded by TAČR SS03010134 "Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)". 
