@@ -1,6 +1,6 @@
 # Example input files required by individual functions of this repository
 
-**Tree-ring widths** : annual tree-ring widths measured per each tree `rwl <sup>Note</sup>`
+**Tree-ring widths** : annual tree-ring widths measured per each tree `rwl` <sup>`Note`</sup>
 
 **Climate** : timeseries of monthly mean temperatures and monthly precipitation totals `csv, xls, xlsx`
 
