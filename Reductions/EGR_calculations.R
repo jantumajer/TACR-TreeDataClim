@@ -11,30 +11,34 @@ library(dplR);library(readxl); library(base); library(pointRes)
 ############################
 
 SITE <- read.csv("meta_github.csv")
+
+# Dataframes to store the  results
 parametry <- data.frame(siteco = SITE$site_code, a = NA, r = NA, negative.spline = NA, replication.less.5 = NA, shorter.than.40 = NA)
 reccinterval <- data.frame(siteco = SITE$site_code, z40 = NA)
-counter <- 1
-nrs.for.spline <- 30 # Here define a spline length to be used for detrending of individual tree-ring width series
 
+# Here define a spline length to be used for detrending of individual tree-ring width series
+nrs.for.spline <- 30 
+
+counter <- 1
 
 for (i in c(1:nrow(SITE))){
   
 serie1 <- read.rwl(SITE[i, "raw_data_file_name"]) 
 
-### Skript, ktery vypocte spliny a vyradi serie, pro ktere jde hodnota splinu pod nulu ###
+# Each series is fit with a spline with a length equal to nrs.for.spline and trees with negative value of spline function are removed
 zaporny.spline <- data.frame(SERIE = colnames(serie1), FLAG = NA)
 
 for (j in c(1:ncol(serie1))){
-  spline.fit <- ffcsaps(na.omit(serie1[,j]), nyrs = nrs.for.spline) # fituje spline
-  zaporny.spline[j, "FLAG"] <- sum(spline.fit < 0) # Pocet nafitovanych hodnot pod nulou
+  spline.fit <- ffcsaps(na.omit(serie1[,j]), nyrs = nrs.for.spline) # spline fit
+  zaporny.spline[j, "FLAG"] <- sum(spline.fit < 0) # Number of years with value of spline<0
   rm(spline.fit)
 }
 
-zachovat <- unique(zaporny.spline[zaporny.spline$FLAG == 0, "SERIE"])
+zachovat <- unique(zaporny.spline[zaporny.spline$FLAG == 0, "SERIE"]) # List series with no tree-ring with spline<0
 serie1.subset <- serie1[, colnames(serie1) %in% zachovat]
 
-parametry[counter, "negative.spline"] <- sum(zaporny.spline$FLAG > 1)/nrow(zaporny.spline)
-print(paste("Ze souboru ", SITE[i, "raw_data_file_name"], " vyrazeno ", 100*round(parametry[counter, "negative.spline"], 2), " % serii", sep = ""))
+parametry[counter, "negative.spline"] <- sum(zaporny.spline$FLAG > 1)/nrow(zaporny.spline) # Proportion of series excluded due to negative spline
+
 ########
 
 serie2 <- detrend (serie1.subset, method = "Spline", nyrs = nrs.for.spline)
