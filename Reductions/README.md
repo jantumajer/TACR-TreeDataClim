@@ -8,7 +8,7 @@ Skripts were applied in the following order:
 - Calculation of z-chron chronology from detrended series (30-years spline) for the period since 1870
 - z-transformed site chronology is subset to include only the negative pointers and ranked according to the intensity of the pointer (1 = largest deviation)
 - Ranking of the intensity of the pointer is converted into recurrence frequency (frequency = ranking/chronology length)
-- Relationship between reccurence frequency and pointer intensity (EGRZ) is modeled using exponetnial regression
+- Relationship between reccurence frequency and pointer intensity (EGRZ) is modeled using exponential regression
 - The critical value of pointer intensity (EGRZ) for events with recurrence interval > 40 years is determined based on the exponetial equation
 - All years with observed EGR exceeding critical threshold for 40-years reccurence are marked as extreme growth reductions
 - Legacy effects: If there are 2-5 consecutive years with EGR exceeding a 40-years threshold, their cumulative value is appended to the first year 
