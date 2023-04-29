@@ -1,7 +1,7 @@
 # TreeDataClim Package
 
 ### Acknowledgements and credits
-This package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
+The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
 
 The functions were developed to process tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
 - Charles University, Faculty of Science, [Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
