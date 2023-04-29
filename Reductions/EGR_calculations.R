@@ -1,5 +1,5 @@
 ###
-### This is R-script to calculate basic descriptive statistics of tree-ring width series for each site ###
+### R-script to calculate basic descriptive statistics of tree-ring width series for each site ###
 ###
 
 # Reguired open-source packages:
