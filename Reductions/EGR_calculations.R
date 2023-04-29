@@ -10,18 +10,16 @@ library(dplR);library(readxl); library(base); library(pointRes)
 
 ############################
 
-SITE <- read.csv("E:/TACR/zchron_TestData2/META/data_april2_withCZU.csv")
+SITE <- read.csv("meta_github.csv")
 parametry <- data.frame(siteco = SITE$site_code, a = NA, r = NA, negative.spline = NA, replication.less.5 = NA, shorter.than.40 = NA)
 reccinterval <- data.frame(siteco = SITE$site_code, z40 = NA)
 counter <- 1
-nrs.for.spline <- 30 # Zde zadej hodnotu splinu pouzitou pro detrendovani
+nrs.for.spline <- 30 # Here define a spline length to be used for detrending of individual tree-ring width series
 
 
 for (i in c(1:nrow(SITE))){
   
-  if (!(SITE[i, "raw_data_file_name"] == "")){ # Podminka vlozena do te doby, nez Cada a Rydval poslou svoje rwl soubory
-  
-serie1 <- read.rwl(paste("E:/TACR/zchron_TestData2/RWL/",SITE[i, "raw_data_file_name"], sep = "")) 
+serie1 <- read.rwl(SITE[i, "raw_data_file_name"]) 
 
 ### Skript, ktery vypocte spliny a vyradi serie, pro ktere jde hodnota splinu pod nulu ###
 zaporny.spline <- data.frame(SERIE = colnames(serie1), FLAG = NA)
@@ -120,8 +118,6 @@ serie5a$egrz <- serie5a$AVGztrans *-1
   rm(serie1,serie1.subset, serie2, serie3, serie4, serie5, numrows2, numrows1, fitserie, zoutput, zoutput.2,
      zaporny.spline, zachovat)
 }
-
-} # Konec podminky - Cada + Rydval
   counter<- counter+1
   
 }
