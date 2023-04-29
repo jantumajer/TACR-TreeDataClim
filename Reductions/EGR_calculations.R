@@ -41,48 +41,56 @@ parametry[counter, "negative.spline"] <- sum(zaporny.spline$FLAG > 1)/nrow(zapor
 
 ########
 
-serie2 <- detrend (serie1.subset, method = "Spline", nyrs = nrs.for.spline)
+serie2 <- detrend (serie1.subset, method = "Spline", nyrs = nrs.for.spline) # Detrending tree-ring width series
 serie3 <- pointer.zchron (serie2, z.thresh = 0.01, make.plot = FALSE,
-                          period = c(max(1870,min(as.numeric(rownames(serie2)))), # Odsekavam casti serii pred rokem 1870
+                          period = c(max(1870,min(as.numeric(rownames(serie2)))), # The calculation of z-chron chronology considers only the period after 1870
                                      max(as.numeric(rownames(serie2)))))
 serie4 <- serie3$out
 numrows1 <- nrow(serie4)
 
-if (max(serie4$nb.series) < 5) {parametry[counter, "replication.less.5"] <- 1}
-if (max(serie4$nb.series) >= 5) { # Nove vlozena podminka, ktera nepristoupi k vymezeni rgc pro chronologie, ktere maji v momente maximalni replikace mene nez 5 stromu
+if (max(serie4$nb.series) < 5) {parametry[counter, "replication.less.5"] <- 1} # If the replication (after the removal of series with negative spline) is lower than 5, the process is stoped
+if (max(serie4$nb.series) >= 5) { 
   
   parametry[counter, "replication.less.5"] <- 0
   
-serie5a <- subset(serie4, nb.series>=5)
-serie5a$egrz <- serie5a$AVGztrans *-1
-  serie5 <- subset(serie4, nb.series>=5 & AVGztrans<0)
+  # Entire file with simulated z-chron chronology (serie5a) #
+  serie5a <- subset(serie4, nb.series>=5) # Cut-off the part of chronology with replication below 5 trees
+  serie5a$egrz <- serie5a$AVGztrans *-1
+  
+  # Subset of z-chron chronology including only negative pointers (serie5) # 
+  serie5 <- subset(serie4, nb.series>=5 & AVGztrans<0) # Cut-off the part of chronology with replication below 5 trees + filter only NEGATIVE pointers
   serie5$egrz <- serie5$AVGztrans *-1
-  serie5$rankz <- rank(serie5$egrz, ties.method="min") # Zde byla zasadni chyba, nelze pouzivat first, protoze to prideli jine poradi stejne velkym rgc
-                                                         # Jeste se muzeme dale pobavit o tom, jak by bylo toto optimalni resit
+  serie5$rankz <- rank(serie5$egrz, ties.method="min") # Assign a ranking to each of negative pointers (according to their intensity)
+  
   numrows2 <- nrow(serie5)
-  serie5$rankevent <- numrows2+1-serie5$rankz
-  serie5$reccevent <- numrows1/serie5$rankevent
-  fitserie <- nls(reccevent ~ a*exp(r*egrz), start = list(a=1, r=2), data = serie5, control = list(maxiter = 10000))
-  parametry[counter, "a"] <- (coef(fitserie)) ["a"]
-  parametry[counter, "r"] <- (coef(fitserie)) ["r"]
-  reccinterval[counter, "z40"] <- (log(40/parametry[counter,"a"]))/parametry[counter, "r"]
+  serie5$rankevent <- numrows2+1-serie5$rankz # Inverting the ranking of negative pointers (i.e., the biggest event = 1, the second biggest event = 2, ... )
+  serie5$reccevent <- numrows1/serie5$rankevent # Calculating recurence interval, i.e., how frequently did the given pointer on average occurred (the biggest event occured once per lifespan of chronology, the second biggest event occurence on average once per half of the lifespan of chronology, ...)
+  fitserie <- nls(reccevent ~ a*exp(r*egrz), start = list(a=1, r=2), data = serie5, control = list(maxiter = 10000)) # Exponential regression between recurrence interval ~ pointer intensity
+  parametry[counter, "a"] <- (coef(fitserie)) ["a"] # coefficients
+  parametry[counter, "r"] <- (coef(fitserie)) ["r"] 
+  reccinterval[counter, "z40"] <- (log(40/parametry[counter,"a"]))/parametry[counter, "r"] # Predicted value of growth reduction intensity (ERGZ) for an event with theoretical reccurence interval of 40 years based on the equation of exponential regression
 
-  # Myslim, ze stoji za to si pro kontrolu vzdy nechat vykreslit graf fitu. Pripadne mozne vypoznamkovat
-  plot(serie5$reccevent ~ serie5$rankevent, col = "blue", main = paste(SITE[i, "site_name"]))
-  points(predict(fitserie) ~ serie5$rankevent, col = "red")
-  abline(a = 40, b = 0)
+  # Plot of the regression Recurrence ~ ERGZ for given site
+  # Not needed to run
+  # plot(serie5$reccevent ~ serie5$rankevent, col = "blue", main = paste(SITE[i, "site_name"]))
+  # points(predict(fitserie) ~ serie5$rankevent, col = "red")
+  # abline(a = 40, b = 0)
 
   serie5$zfit <- predict(fitserie)
-  serie5$zz40 <- ifelse(serie5$egrz>=reccinterval[counter, "z40"], 1,0)
+  serie5$zz40 <- ifelse(serie5$egrz>=reccinterval[counter, "z40"], 1,0) # Which years experienced EGR, i.e., growth below theoretical threshold for events with 40-years recurrence period?
   
-  if(sum(serie5$zz40) == 0){parametry[counter, "shorter.than.40"] <- 1}
-  if(sum(serie5$zz40) > 0){ # Nova podminka, ktera odfiltrovana serie kratsi 40 let a ty, ktere nemaji zadne ERGC
+  if(sum(serie5$zz40) == 0){parametry[counter, "shorter.than.40"] <- 1} # Stop for series shorter than 40 years
+  if(sum(serie5$zz40) > 0){ 
     parametry[counter, "shorter.than.40"] <- 0
     
-    zoutput <- subset(serie5, zz40==1)
+    zoutput <- subset(serie5, zz40==1) # Subset of EGRs
     zoutput <- zoutput[-c(2:4,6:9)]
 
-    # Zde jsem pridal cast, ktera umozni nasledujici spojeni roku s RGC, kter jdou po sobe
+    # Legacy effects
+    # If 2-5 EGRs occurr in a sequence, they are aggregated and assigned to the first year of the EGR period
+    # In other words, we expect that the first year triggered the growth reduction, that lasted due to legacy effects for more than one growing season
+    # Not needed to run
+    
     zoutput$merge <- zoutput$year
 
     if (nrow(zoutput) > 2){
@@ -94,17 +102,17 @@ serie5a$egrz <- serie5a$AVGztrans *-1
         if (j > 5 && zoutput[j, "year"] == (zoutput[(j-5), "year"] + 1)){zoutput[j, "merge"] <- zoutput[(j-5), "merge"]}
       }
     }
-
-    # Zde pocitam KUMULATIVNI ergz za celou dobu trvani (prvni rok + legacy). Pokud bys to chtel nahradit prumerem, dej vedet
     zoutput.2 <- aggregate(zoutput[,c("egrz", "zz40")], by = list(START.YEAR = zoutput$merge), FUN = sum)
+    
     colnames(zoutput.2) <- c("START.YEAR", "ERGZ", "DURATION")
     zoutput.2$SITE <- paste(SITE[i, "site_code"])
     zoutput.2$lat <- paste(SITE[i, "site_lat"])
     zoutput.2$long <- paste(SITE[i, "site_long"])
     zoutput.2$elev <- paste(SITE[i, "elevation"])
     zoutput.2$spec <- paste(SITE[i, "species"])
-    write.csv(zoutput.2, paste("E:/TACR/Vysledky/perSite/egrz/", SITE[i, "site_code"],"ergz.csv", sep = ""))
+    write.csv(zoutput.2, paste(SITE[i, "site_code"],"ergz.csv", sep = "")) # Saving the dataframe with the list of significant EGRs for given site
   }
+  
   serie5$SITE <- paste(SITE[i, "site_code"])
   serie5a$SITE <- paste(SITE[i, "site_code"])
   serie5$lat <- paste(SITE[i, "site_lat"])
@@ -116,8 +124,8 @@ serie5a$egrz <- serie5a$AVGztrans *-1
   serie5$spec <- paste(SITE[i, "species"])
   serie5a$spec <- paste(SITE[i, "species"])
 
-  write.csv(serie5, paste("E:/TACR/Vysledky/perSite/bla/", SITE[i, "site_code"],"bla.csv", sep = ""))
-  write.csv(serie5a, paste("E:/TACR/Vysledky/perSite/blall/", SITE[i, "site_code"],"blall.csv", sep = ""))
+  write.csv(serie5, paste(SITE[i, "site_code"],"bla.csv", sep = "")) # Saving a subset of z-chron chronology with only negative growth deviations for given site
+  write.csv(serie5a, paste(SITE[i, "site_code"],"blall.csv", sep = "")) # Saving a full z-chron chronology for given site
   
   rm(serie1,serie1.subset, serie2, serie3, serie4, serie5, numrows2, numrows1, fitserie, zoutput, zoutput.2,
      zaporny.spline, zachovat)
@@ -126,4 +134,4 @@ serie5a$egrz <- serie5a$AVGztrans *-1
   
 }
 
-write.csv(parametry, "E:/TACR/Vysledky/parametry_fit_exponetnial.csv")
+write.csv(parametry, "parametry_fit_exponetnial.csv") # Saving parameters of exponential functions for all sites
