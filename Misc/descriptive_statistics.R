@@ -5,9 +5,11 @@
 # Reguired open-source packages:
 library(dplR);library(readxl); library(base); library(pointRes)
 # Reguired input files
-SITE <- read.csv("sites.csv")
+# Site tree-ring width series in *.rwl format
+# Site metadata
 
 ############################
+SITE <- read.csv("sites.csv")
 
 parametry <- data.frame(siteco = SITE$site_code, MeanRingWidth = NA, MeanAge = NA, FirstYear = NA, LastYear = NA)
 
