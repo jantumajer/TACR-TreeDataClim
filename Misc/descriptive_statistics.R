@@ -16,7 +16,7 @@ parametry <- data.frame(siteco = SITE$site_code, MeanRingWidth = NA, MeanAge = N
 
 for (i in c(1:nrow(SITE))){
    
-serie1 <- read.rwl(paste("E:/TACR/zchron_TestData2/RWL/",SITE[i, "raw_data_file_name"], sep = "")) 
+serie1 <- read.rwl(SITE[i, "raw_data_file_name"]) 
 
 stats <- rwl.stats(serie1)
 
