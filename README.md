@@ -38,14 +38,6 @@ tumajerj@natur.cuni.cz
 ### Production of extreme growth reductions maps (EGR)
 Skripts were applied in the following order:
 
-0a] `skript_popisne_statistiky.R`
-- Basic descriptive statistics for each chronology - mean RW, mean age, first and last year
-
-
-0b] `climadiagrams_facet.R`
-- Plotting climatic diagrams for years of extreme growth reduction
-
-
 1] `skript_pointeryF_imploctable.R`
 ##### The crucial script calculating EGR based on the following approach:
 - Filtering out of spurious *series*: series whose 30-years spline gets negative
