@@ -16,6 +16,7 @@ The development of the modified version of the VS-Lite process-based model of wo
 
 ### Contact and bug reporting
 Jan Tumajer, Charles University, Faculty of Science
+
 tumajerj@natur.cuni.cz
 
 
