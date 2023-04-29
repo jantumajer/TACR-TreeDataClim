@@ -1,5 +1,5 @@
 ###
-### This is R-script to plot climatic diagram for given year ###
+### This is R-script to plot climatic diagram for given site ###
 ###
 
 # Reguired open-source packages:
