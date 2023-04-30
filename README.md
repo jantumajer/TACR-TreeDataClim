@@ -31,7 +31,9 @@ The functions were developed and tested based on TreeDataClim dataset, i.e., a d
 
 ### Contact and bug reporting
 Jan Tumajer 
+
 Charles University, Faculty of Science 
+
 Prague, Czech Republic 
 
 tumajerj@natur.cuni.cz
