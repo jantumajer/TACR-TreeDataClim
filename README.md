@@ -30,8 +30,8 @@ Individual functions serve to process tree-ring width data following the methodo
 The functions were developed and tested based on TreeDataClim dataset, i.e., a dense network of tree-ring width series across the Czech Republic. However, the functions can be directly applied to any other regions of the world with available tree-ring width datasets. The most functions target period 1961-2010, since we found this period as an optimal balance between temporal span of the analysis and quality of the data (mainly climatic datasets). Deatils about the required inputs and the way to apply each functions are given as notes in the specific script. Some functions require a prior installation of open-source packages and extensions both in R and Octave languages. Required packages and extensions are indicated at the beggining of each script.
 
 ### Contact and bug reporting
-Jan Tumajer
-Charles University, Faculty of Science
-Prague, Czech Republic
+Jan Tumajer 
+Charles University, Faculty of Science 
+Prague, Czech Republic 
 
 tumajerj@natur.cuni.cz
