@@ -18,6 +18,7 @@ Reference: *Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka,
 2] `EGR spatial.R`
 - Plotting diagnostic maps with a spatial distribution of sites showing significant and non-significant EGRs in a given year
 
+![1976](https://user-images.githubusercontent.com/25429975/235671844-3c5a5be4-22dc-417b-b449-c74d13cc1660.jpeg)
 
 3] `EGR_regressions.R`
 - Linear regression models explaining a spatial distribution of EGRs in a given year by site conditions
