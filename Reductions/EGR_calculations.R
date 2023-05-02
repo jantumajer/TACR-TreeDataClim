@@ -110,7 +110,11 @@ if (max(serie4$nb.series) >= 5) {
     zoutput.2$long <- paste(SITE[i, "site_long"])
     zoutput.2$elev <- paste(SITE[i, "elevation"])
     zoutput.2$spec <- paste(SITE[i, "species"])
-    write.csv(zoutput.2, paste(SITE[i, "site_code"],"ergz.csv", sep = "")) # Saving the dataframe with the list of significant EGRs for given site
+    write.csv(zoutput.2, paste(SITE[i, "site_code"],"ergz.csv", sep = "")) # Crucial output!:
+    # Saves the dataframe with the list of significant EGRs for given site
+    # We strongly recommend to create a specific folder in your working directory to store outputs saved on line 113
+    # Since these results are the most important outputs of EGR calculation, they are processed by subsequent scripts.
+    # Therefore, storing them separately makes the following workflow smoother.
   }
   
   serie5$SITE <- paste(SITE[i, "site_code"])
