@@ -20,4 +20,4 @@ Reference: *Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka,
 
 
 3] `skript_regressions.R`
-- Fitting linear regression models explaining EGR of a given year by site conditions
+- Linear regression models explaining a spatial distribution of EGRs in given year by site conditions
