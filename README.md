@@ -35,12 +35,6 @@ The functions were developed and tested reflecting the TreeDataClim dataset and 
 ### Contact and bug reporting
 Jan Tumajer
 
-Charles University, Faculty of Science
-
-Department of Physical Geography and Geoecology
-
-Albertov 6
-
-12843 Prague, Czech Republic
+Charles University, Faculty of Science, Department of Physical Geography and Geoecology, Albertov 6, 12843 Prague, Czech Republic
 
 tumajerj@natur.cuni.cz
