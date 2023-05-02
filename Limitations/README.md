@@ -3,7 +3,7 @@
 The model is based on the VS-Lite model originaly published by Dr. Tolwinski-Ward. The VS-Lite is a simple process-based model of wood formation assuming that intra-annual radial growth rate is non-linearly dependent on temperature, soil moisture, and photoperiod. In a framework of the TreeDataClim project, we used the model to calculate the intensity of climatic limitation of wood formation at each site in a monthly scale.
 
 ### Principles of the VS-Lite model
-The detailed description of the VS-Lite workflow is provided in a publication of Tolwinski-Ward et al. (2011)
+The detailed description of the VS-Lite workflow is provided in a publication of Tolwinski-Ward et al. (2011). The approach used for an assessment of the intensity of various types of climate-growth limitation for annual wood formation at given site is provided in Tumajer et al. (2017).
 
 ### Modifications to the original VS-Lite model
 To improve applicability of the VS-Lite model in cold and wet environments, which was shown insufficient (Breitenmoser et al. 2014), we modified the response functions of the model. Specifically, we incorporated an assumption of an optinal limitation of radial growth by too high soil moisture and too high temperature.
