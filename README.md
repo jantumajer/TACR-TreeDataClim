@@ -10,6 +10,8 @@ Functions presented in this package were developed for the assessment of growth 
 - Institute of Botany of the Czech Academy of Sciences
 - Jan Evangelista Purkyně University, Faculty of Environment
 
+![obrazek](https://user-images.githubusercontent.com/25429975/235666459-c20a2ca5-748a-42ad-8c4c-44b9c8034a04.png)
+
 ### Acknowledgements and credits
 The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*.
 
