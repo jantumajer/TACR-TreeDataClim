@@ -10,7 +10,9 @@ To improve applicability of the VS-Lite model in cold and wet environments, whic
 
 $𝐺𝑟𝑇={0 (𝑇−𝑇1)(𝑇2−𝑇1)⁄1 𝑖𝑓 𝑇≤ 𝑇1 𝑖𝑓 𝑇1<𝑇<𝑇2𝑖𝑓 𝑇2≤𝑇$
 
-where T1 represents a parameter of threshold temperature below which cambial activity cannot be sustained, and T2 represents lower margin of temperature optimum, above which growth decouples from the temperature. The analogous equation is used to calculate GrM. This simplified approach might not be appropriate at sites and regions where the cambial activity might be limited by very high temperatures or by soil water oversaturation. Indeed, we modified the original equations used for the calculation of partial growth rates by introducing parameters of the upper margin of optimal conditions (M3 and T3) and upper thresholds above which the cambial activity cannot be sustained (M4 and T4). The modified equation for partial growth rate to temperature has a form: $𝐺𝑟𝑇={0 (𝑇−𝑇1)(𝑇2−𝑇1)⁄1(𝑇4−𝑇)(𝑇4−𝑇3)⁄0 𝑖𝑓 𝑇≤ 𝑇1 𝑖𝑓 𝑇1<𝑇≤𝑇2 𝑖𝑓 𝑇2<𝑇≤𝑇3𝑖𝑓 𝑇3<𝑇≤𝑇4𝑖𝑓 𝑇4≤𝑇$
+where T1 represents a parameter of threshold temperature below which cambial activity cannot be sustained, and T2 represents lower margin of temperature optimum, above which growth decouples from the temperature. The analogous equation is used to calculate GrM. This simplified approach might not be appropriate at sites and regions where the cambial activity might be limited by very high temperatures or by soil water oversaturation. Indeed, we modified the original equations used for the calculation of partial growth rates by introducing parameters of the upper margin of optimal conditions (M3 and T3) and upper thresholds above which the cambial activity cannot be sustained (M4 and T4). The modified equation for partial growth rate to temperature has a form: 
+
+https://github.com/jantumajer/TACR-TreeDataClim/issues/2#issue-1692100034
 
 The analogous form of equation is used to calculate partial growth rates to soil moisture.
 
