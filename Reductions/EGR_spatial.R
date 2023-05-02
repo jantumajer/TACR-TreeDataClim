@@ -12,7 +12,7 @@ library(dplR);library(readxl); library(base); library(ggplot2); library(rgdal)
 ############################
 full.sitelist <- read.csv("meta.csv") # Load metadata
 
-seznam<-list.files () # List all site-specific files with significant EGR events as produced by EGR_calculations.R
+seznam<-list.files () # List all site-specific files with significant EGR events as produced by EGR_calculations.R (line 113)
 taball4<-data.frame (sitelist = seznam)
 
 tabspojena<-data.frame(X=NA, START.YEAR=NA, ERGZ=NA, DURATION=NA, SITE=NA, lat=NA, long=NA, elev=NA, spec=NA)
@@ -27,7 +27,7 @@ for (i in c(1:nrow(taball4))){
 }
 
 ####### Ploting of diagnostic maps ############
-shp <- readOGR(dsn = "e:/SHAPEFILE/CR2.shp", stringsAsFactors = F) # Zde nutne nacist shapefile CR ve WGS84
+shp <- readOGR(dsn = "e:/SHAPEFILE/CR2.shp", stringsAsFactors = F) # Load a shapefile to improve the visualization of the map (optional)
 
 for (year in c(1961:2020)){
   
@@ -42,10 +42,10 @@ for (year in c(1961:2020)){
     agg.both <- merge(tabspojena.sub.agg, full.sitelist.agg, by = "spec.groups")
     
     map <- ggplot() +
-      geom_polygon(aes(x = long, y = lat, group = group), col = "black", fill = NA, data = shp) +
-      geom_point(aes(x = site_long, y = site_lat), size = 1, alpha = 0.1, pch = 3, data = full.sitelist.sub, position = position_jitter()) +
-      geom_point(aes(x = long, y = lat, col = ERGZ/DURATION, size = DURATION), data = tabspojena.sub, position = position_jitter()) +
-      geom_label(x = 18, y = 50.75, aes(label = paste(x.x, "/", x.y, " = ", round(x.x/x.y, 2)), sep = ""), size = 4, data = agg.both) +
+      geom_polygon(aes(x = long, y = lat, group = group), col = "black", fill = NA, data = shp) + # Country border
+      geom_point(aes(x = site_long, y = site_lat), size = 1, alpha = 0.1, pch = 3, data = full.sitelist.sub, position = position_jitter()) + # All sampling sites
+      geom_point(aes(x = long, y = lat, col = ERGZ/DURATION, size = DURATION), data = tabspojena.sub, position = position_jitter()) + # Only sampling sites with significant EGR
+      geom_label(x = 18, y = 50.75, aes(label = paste(x.x, "/", x.y, " = ", round(x.x/x.y, 2)), sep = ""), size = 4, data = agg.both) + # Ratio of significant to all sites in given year
       scale_color_gradient(limits = c(0,5), low = "green", high = "red") +
       scale_size_continuous(range = c(0, 6), limits = c(0, 5)) +
       ggtitle(paste(year)) +
@@ -62,6 +62,6 @@ for (year in c(1961:2020)){
             plot.title = element_text(color = "black", hjust = 0.5, vjust = 0, face = "bold", size = 18))
     map
     
-    ggsave(paste("e:/TACR/Maps/", year, ".jpeg", sep = ""), width = 15, height = 10, dpi = 250)
+    ggsave(paste(year, ".jpeg", sep = ""), width = 15, height = 10, dpi = 250)
   }
 }
