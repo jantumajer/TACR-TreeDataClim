@@ -16,6 +16,8 @@ where T1 represents a parameter of threshold temperature below which cambial act
 
 The analogous form of equation is used to calculate partial growth rates to soil moisture.
 
+![obrazek](https://user-images.githubusercontent.com/25429975/235648004-205298de-78ba-4be6-9074-69b1f53a3fbb.png)
+
 ### Applicability
 The scripts can be run using Matlab or Octave (recommended). As an input, the scripts require site chronologies, climatic data (monthly mean air temperature and precipitation totals) and site coordinates. However, these input files for Octave have to have a different format compared to R scripts. Therefore, template for input files to be used with the VS-Lite is stored in a specific subfolder of the `Input` folder. 
 
