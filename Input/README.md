@@ -8,6 +8,6 @@
 
 **Country borders** : ESRI shapefile `shp` with country borders in WGS-84 projection (alternatively, any other type of geographical information<sup>2</sup> can be used)
 
-<sup>1</sup> The `rwl` is standard format for storing tree-ring width data used by dendrochronological comunity. You can find details about this and other types of dendrochronological formats [here](https://www.treeringsociety.org/resources/SOM/Brewer_Murphy_SupplementaryMaterial.pdf).
+<sup>1</sup> `rwl` is standard format for storing tree-ring width data used by dendrochronological comunity. You can find details about this and other types of dendrochronological formats [here](https://www.treeringsociety.org/resources/SOM/Brewer_Murphy_SupplementaryMaterial.pdf).
 
 <sup>2</sup> E.g., administrative borders, rivers, urban districts, biogeographical regions, etc.
