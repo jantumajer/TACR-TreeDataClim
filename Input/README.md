@@ -1,13 +1,13 @@
 # Example input files required by individual functions of this repository
 
-**Tree-ring widths** : annual tree-ring widths measured per each tree stored in `rwl` <sup>Note</sup> format
+**Tree-ring widths** : annual tree-ring widths measured per each tree stored in `rwl` <sup>1</sup> format
 
 **Climate** : timeseries of monthly mean temperatures and monthly precipitation totals stored in `csv` (alt. `xls`, `xlsx`) formats
 
 **Metadata** : site metadata; mandatory columns include site name, coordinates, species, and link to *.rwl file with tree-ring width data of individual trees; format of the metadata file is `csv`
 
-**Country borders** : ESRI shapefile with country borders in WGS projection (alternatively, any other type of geographical information<sup>*</sup> can be used)
+**Country borders** : ESRI shapefile with country borders in WGS projection (alternatively, any other type of geographical information<sup>2</sup> can be used)
 
-<sup>Note</sup> The `rwl` is standard format for storing tree-ring width data used by dendrochronological comunity. You can find details about this and other types of dendrochronological formats [here](https://www.treeringsociety.org/resources/SOM/Brewer_Murphy_SupplementaryMaterial.pdf).
+<sup>1</sup> The `rwl` is standard format for storing tree-ring width data used by dendrochronological comunity. You can find details about this and other types of dendrochronological formats [here](https://www.treeringsociety.org/resources/SOM/Brewer_Murphy_SupplementaryMaterial.pdf).
 
-<sup>*</sup> E.g., administrative borders, rivers, urban districts, biogeographical regions, etc.
+<sup>2</sup> E.g., administrative borders, rivers, urban districts, biogeographical regions, etc.
