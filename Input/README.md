@@ -1,4 +1,4 @@
-# Example input files required by individual functions of this repository
+# Templates of input files required by individual functions of this repository
 
 **Tree-ring widths** : annual tree-ring widths measured per each tree stored in `rwl`<sup>1</sup> format
 
