@@ -4,7 +4,7 @@
 
 # Reguired open-source packages:
 library(dplR);library(readxl); library(base); library(ggplot2); library(rgdal)
-# Reguired input files
+# Reguired input files:
 # Site metadata
 # Site-specific lists of EGRs as produced by EGR_calculations.R
 # Shapefile with country borderd in WGS-84 projection (optional)
