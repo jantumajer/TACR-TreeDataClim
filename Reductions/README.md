@@ -14,6 +14,7 @@ Scripts were applied in the following order:
 - Legacy effects: If there are 2-5 consecutive years with EGR exceeding a 40-year threshold, their cumulative value is appended to the first year
 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235674470-5f3af2e5-a1e5-4205-a6bb-55ba077987e2.png)
+*Illustration of recurrence interval (RI) calculation starting from original time series of relative growth changes (“RGCinv”; a). Relative growth change (RGCs) were ranked according to their size and fitted with an exponential function (b). The theoretical recurrence interval of RGCinv event with given intensity (order) depends on tree age (i.e., the length of the series; c). RGCinv values corresponding to 15- or 50- year recurrence intervals were computed using a theoretical fitted exponential distribution (d). All RGCs exceeding 15- or 50- year recurrence interval threshold values were defined as extreme growth reductions (e)*
 
 Reference: *Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka, O., Svoboda, M., 2022. Trends in climatically driven extreme growth reductions of Picea abies and Pinus sylvestris in Central Europe. Global Change Biology 28, 557–570. https://doi.org/10.1111/gcb.15922*
 
