@@ -1,4 +1,15 @@
+###
+### R-script to plot a spatial distribution of EGRs for each year and each species ###
+###
+
+# Reguired open-source packages:
 library(dplR);library(readxl); library(base); library(ggplot2); library(rgdal)
+# Reguired input files
+# Site metadata
+# Site-specific lists of EGRs as produced by EGR
+
+############################
+
 full.sitelist <- read.csv("E:/TACR/zchron_TestData2/META/data_april2_withCZU.csv")
 colnames(full.sitelist)[5] <- "species"
 
