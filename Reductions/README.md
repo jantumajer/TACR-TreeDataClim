@@ -1,4 +1,4 @@
-# Identification of years with extreme growth reduction (EGR) and their spatial interpolation 
+# Identification of years with extreme growth reductions (EGR) and their spatial interpolation 
 Skripts were applied in the following order:
 
 1] `EGR calculations.R`
