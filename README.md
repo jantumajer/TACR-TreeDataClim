@@ -1,7 +1,7 @@
-# TreeDataClim Package
+# TreeDataClim Repository
 
 ### Team
-Functions presented in this package were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in the [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
+Functions presented in this repository were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in the [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
 - [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
 - [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
 - Forestry and Game Management Research Institute
@@ -13,12 +13,12 @@ Functions presented in this package were developed for the assessment of growth 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235666459-c20a2ca5-748a-42ad-8c4c-44b9c8034a04.png)
 
 ### Acknowledgements and credits
-The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*.
+The repository contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*.
 
 The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions use few publicly-available packages contributing to specific data processing steps and plotting charts. We are grateful to all authors of these packages for making them freely available.
 
 ### Functionality
-This package represents a compilation of stand-alone functions that were developed to process tree-ring width data following the methodology of the TreeDataClim project. The individual functions are grouped in following folders:
+This repository represents a compilation of stand-alone functions that were developed to process tree-ring width data following the methodology of the TreeDataClim project. The individual functions are grouped in following folders:
 - `Reductions`: functions to identify, evaluate, and extrapolate events of extreme growth reductions
 - `Limitations`: a process-based model of intra-annual wood formation and its application to assess the type and the intensity of climatic limitation of wood formation on an intra-annual scale
 - `Trends`: functions to quantify recent growth trends and to extrapolate their patterns across space
