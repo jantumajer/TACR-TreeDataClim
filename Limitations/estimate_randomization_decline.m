@@ -3,7 +3,7 @@ function[random_par, MAX] = estimate_randomization_decline(trw, temp, prec, phi,
   pkg load stk; pkg load statistics;
   more off
 
-  cycles = 15000; % Here set the number of independent simulations 10000
+  cycles = 60000; % Here set the number of independent simulations optimal for <10000
 
   # tic
   for i = 1:cycles
