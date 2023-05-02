@@ -15,7 +15,7 @@ Skripts were applied in the following order:
 
 Reference: *Treml, V., Mašek, J., Tumajer, J., Rydval, M., Čada, V., Ledvinka, O., Svoboda, M., 2022. Trends in climatically driven extreme growth reductions of Picea abies and Pinus sylvestris in Central Europe. Global Change Biology 28, 557–570. https://doi.org/10.1111/gcb.15922*
 
-2] `EGR spattial.R`
+2] `EGR spatial.R`
 - Plotting diagnostic maps with a distribution sites showing a significant EGR in given year
 
 
