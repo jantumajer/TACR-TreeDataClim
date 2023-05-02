@@ -12,7 +12,7 @@ $𝐺𝑟𝑇={0 (𝑇−𝑇1)(𝑇2−𝑇1)⁄1 𝑖𝑓 𝑇≤ 𝑇1 𝑖�
 
 where T1 represents a parameter of threshold temperature below which cambial activity cannot be sustained, and T2 represents lower margin of temperature optimum, above which growth decouples from the temperature. The analogous equation is used to calculate GrM. This simplified approach might not be appropriate at sites and regions where the cambial activity might be limited by very high temperatures or by soil water oversaturation. Indeed, we modified the original equations used for the calculation of partial growth rates by introducing parameters of the upper margin of optimal conditions (M3 and T3) and upper thresholds above which the cambial activity cannot be sustained (M4 and T4). The modified equation for partial growth rate to temperature has a form: 
 
-https://github.com/jantumajer/TACR-TreeDataClim/issues/2#issue-1692100034
+![obrazek](https://user-images.githubusercontent.com/25429975/235633135-add0da4c-e62b-45d6-a990-f2f7d88dcd0c.png)
 
 The analogous form of equation is used to calculate partial growth rates to soil moisture.
 
