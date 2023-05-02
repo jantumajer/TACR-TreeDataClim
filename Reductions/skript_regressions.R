@@ -1,10 +1,18 @@
+###
+### R-script for a spatial regression of observed values of z-chronology in given year ###
+###
+
+# Reguired open-source packages:
 library(readxl); library(ape)
+# Reguired input files:
+# Site metadata
+# Site-specific values of z-chronology for each year as produced by EGR_calculations.R
 
-sites <- read.csv("meta.csv", row.names=1)
-fit_parameters <- read.csv("E:/TACR/Vysledky/parametry_fit_exponetnial.csv", row.names=1)
+############################
 
+sites <- read.csv("meta.csv", row.names=1) # Load metadata
 
-for_regression <- data.frame(SITE = NA, SPECIES = NA, YEAR = NA, LAT = NA, LON = NA, ELEV = NA, EGRZ = NA)
+for_regression <- data.frame(SITE = NA, SPECIES = NA, YEAR = NA, LAT = NA, LON = NA, ELEV = NA, EGRZ = NA) # Prepare dataframe that will be filled by value of EGR (dependent variable) and geographical features (explanatory predictors)
 for_regression <- for_regression[-1, ]
 counter <- 1
 
@@ -15,12 +23,9 @@ pointer.year <- 1976 # Select important EGR year (identify them e.g., using maps
 
       
 for (k in c(1:nrow(sites.SPEC))){ # This script extracts a value of z-chron chronology for each site of given species and given year and prepares the table ready for regression models
-        
-  if (!(sites.SPEC[k, "raw_data_file_name"] == "") &
-      fit_parameters[fit_parameters$siteco == sites.SPEC[k, "site_code"], "replication.less.5"] == 0 &
-      fit_parameters[fit_parameters$siteco == sites.SPEC[k, "site_code"], "shorter.than.40"] == 0){
           
-     dat <- read.csv(paste("e:/TACR/Vysledky/perSite/blall/", sites.SPEC[k, "site_code"], "blall.csv", sep = ""))
+     dat <- read.csv(paste(sites.SPEC[k, "site_code"], "blall.csv", sep = "")) # Load 'blall' file, i.e., dataframe with values of z-chronology for each site and each year
+      # This file is produced by EGR_calculation.R, line
           
      for_regression[counter, "SITE"] <- sites.SPEC[k, "site_code"]
      for_regression[counter, "SPECIES"] <- sites.SPEC[k, "species"]
@@ -34,7 +39,7 @@ for (k in c(1:nrow(sites.SPEC))){ # This script extracts a value of z-chron chro
           
      rm(dat)
      counter <- counter + 1
-    }
+
  }
 
 for_regression_withoutNA <- for_regression[!(is.na(for_regression$EGRZ)),]
