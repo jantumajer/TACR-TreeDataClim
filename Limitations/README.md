@@ -16,7 +16,9 @@ where T1 represents a parameter of threshold temperature below which cambial act
 
 The analogous form of equation is used to calculate partial growth rates to soil moisture.
 
-### Aplicability
+### Applicability
+As an input, the scripts require site chronologies, climatic data (monthly mean air temperature and precipitation total) and site coordinates. However, please note, that Octave expectes these files to have a different format compared to R scripts. Therefore, template for input files to be used with the VS-Lite is stored in a specific subfolder of the `Input` folder. 
+
 To calibrate the model, run `Skript_RUN.m` function in Octave. The function will authomatically load `estimate_randomization_decline.m` script to generate a large number of random combinations of the model parameters. Next, the script will store the set of parameters resulting in a highest correlation between the simulated and observed chronologies. With this set of parameters, the full model is calibrated and various types of results are stored using `VSLite_decline.m`
 
 ### References
