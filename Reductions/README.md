@@ -2,7 +2,7 @@
 Skripts were applied in the following order:
 
 1] `EGR calculations.R`
-##### The crucial script calculating EGR based on the following approach:
+##### A crucial script calculating EGR based on the following approach:
 - Filtering out spurious series: series whose 30-years spline gets negative
 - Filtering out non-robust sites: replication lower than 5 trees OR shorter than 40 years
 - Calculation of z-chron chronology from detrended series (30-years spline) for the period since 1870
