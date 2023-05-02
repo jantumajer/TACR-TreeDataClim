@@ -14,9 +14,12 @@ where T1 represents a parameter of threshold temperature below which cambial act
 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235633135-add0da4c-e62b-45d6-a990-f2f7d88dcd0c.png)
 
-The analogous form of equation is used to calculate partial growth rates to soil moisture.
+Therefore, the response of partial growth rates to climatic variability has single optimum (T2-T3), two intervals of linear response of growth rate to climatic variable (T1-T2 & T3-T4), and two intervals of conditions not permiting radial growth (<T1 & >T4):
 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235648004-205298de-78ba-4be6-9074-69b1f53a3fbb.png)
+
+The analogous form of equation is used to calculate partial growth rates to soil moisture.
+
 
 ### Applicability
 The scripts can be run using Matlab or Octave (recommended). As an input, the scripts require site chronologies, climatic data (monthly mean air temperature and precipitation totals) and site coordinates. However, these input files for Octave have to have a different format compared to R scripts. Therefore, template for input files to be used with the VS-Lite is stored in a specific subfolder of the `Input` folder. 
