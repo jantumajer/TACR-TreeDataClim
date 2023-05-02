@@ -6,14 +6,13 @@
 library(dplR);library(readxl); library(base); library(ggplot2); library(rgdal)
 # Reguired input files
 # Site metadata
-# Site-specific lists of EGRs as produced by EGR
+# Site-specific lists of EGRs as produced by EGR_calculations.R
+# Shapefile with country borderd in WGS-84 projection (optional)
 
 ############################
+full.sitelist <- read.csv("meta.csv") # Load metadata
 
-full.sitelist <- read.csv("E:/TACR/zchron_TestData2/META/data_april2_withCZU.csv")
-colnames(full.sitelist)[5] <- "species"
-
-seznam<-list.files ("E:/TACR/Vysledky/perSite/egrz/")
+seznam<-list.files () # List all site-specific files with significant EGR events as produced by EGR_calculations.R
 taball4<-data.frame (sitelist = seznam)
 
 tabspojena<-data.frame(X=NA, START.YEAR=NA, ERGZ=NA, DURATION=NA, SITE=NA, lat=NA, long=NA, elev=NA, spec=NA)
