@@ -6,6 +6,6 @@
 
 **Metadata** : site metadata; mandatory columns include site name, coordinates, species, and link to *.rwl file with tree-ring width data of individual trees; format of the metadata file is `csv`
 
-**Country borders** : ESRI shapefile with country borders in WGS projection (alternativelly, any other type of geographical information <sup>*</sup> can be used)
+**Country borders** : ESRI shapefile with country borders in WGS projection (alternativelly, any other type of geographical information<sup>*</sup> can be used)
 
 <sup>Note</sup> The `rwl` is standard format for storing tree-ring width data used by dendrochronological comunity. You can find details about this and other types of dendrochronological formats [here](https://www.treeringsociety.org/resources/SOM/Brewer_Murphy_SupplementaryMaterial.pdf)
