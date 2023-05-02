@@ -37,6 +37,10 @@ Jan Tumajer
 
 Charles University, Faculty of Science
 
-Prague, Czech Republic
+Department of Physical Geography and Geoecology
+
+Albertov 6
+
+12843 Prague, Czech Republic
 
 tumajerj@natur.cuni.cz
