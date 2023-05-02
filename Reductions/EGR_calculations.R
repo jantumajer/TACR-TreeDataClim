@@ -124,7 +124,7 @@ if (max(serie4$nb.series) >= 5) {
   serie5$spec <- paste(SITE[i, "species"])
   serie5a$spec <- paste(SITE[i, "species"])
 
-  write.csv(serie5, paste(SITE[i, "site_code"],"bla.csv", sep = "")) # Saving a subset of z-chron chronology with only negative growth deviations for given site
+  write.csv(serie5, paste(SITE[i, "site_code"],"bla.csv", sep = "")) # Saving a subset of z-chron chronology with only significant EGRs
   write.csv(serie5a, paste(SITE[i, "site_code"],"blall.csv", sep = "")) # Saving a full z-chron chronology for given site
   
   rm(serie1,serie1.subset, serie2, serie3, serie4, serie5, numrows2, numrows1, fitserie, zoutput, zoutput.2,
