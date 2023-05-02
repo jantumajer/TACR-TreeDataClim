@@ -1,7 +1,7 @@
 # TreeDataClim Package
 
 ### Team
-Functions presented in this package were developed for the assessment of growth trends, climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was specifically designed for processing tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
+Functions presented in this package were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
 - [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
 - [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
 - Forestry and Game Management Research Institute
@@ -13,22 +13,22 @@ Functions presented in this package were developed for the assessment of growth 
 ### Acknowledgements and credits
 The package contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*. 
 
-The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions take use of few publicly-available packages contributing to specific steps of data processing and charts' plotting. We are gratefull to all authors of these packages for making them freely available.
+The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions use few publicly-available packages contributing to specific steps of data processing and charts' plotting. We are gratefull to all authors of these packages for making them freely available.
 
 ### Functionality
 This package represents a compilation of a stand-alone functions that were developed to process tree-ring width data following the methodology of TreeDataClim project. The individual groups of functions are as follows:
-- `Misc (aka miscellaneous)` : pre-processing of dendrometer data required for subsequent functions, ploting of climatic diagrams
-- `Reductions` : functions to identify, eveluate, and extrapolate events of extreme growth reductions
-- `Limitations` : process-based model of intra-annual wood formation and its application to assess the type and the intensity of climatic limitation of wood formation
+- `Reductions` : functions to identify, evaluate, and extrapolate events of extreme growth reductions
+- `Limitations` : process-based model of intra-annual wood formation and its application to assess the type and the intensity of climatic limitation of wood formation in intra-annual scale
 - `Trends` : functions to quantify recent growth trends and to extrapolate their patterns across space
+- `Misc (aka miscellaneous)` : pre-processing of dendrometer data required for subsequent functions, plotting of climatic diagrams
 
 All functions were developed in [R language](https://www.r-project.org/) except the VS-Lite process-based model of wood formation, which is written in [Octave](https://octave.org/). Both languages are open-source. We recommend to use the latest versions of both programming environments with our scripts.
 
 ### Inputs
-Individual functions serve to process tree-ring width data following the methodology developed as a part of TreeDataClim project. Individual inputs differ depending on each function and are indicated at the beggining of each script. The example format of each input file can be found in the `Input` folder. 
+Individual functions serve to process tree-ring width data following the methodology developed as a part of TreeDataClim project. Individual inputs differ depending on each function and are indicated at the beggining of each script. The template of each input file can be found in the `Input` folder. This folder contains example data from 16 sites of two species (**Picea abies** and **Quercus robur**) distributed across the northern part of the Czech Republic.
 
 ### Applicability
-The functions were developed and tested based on TreeDataClim dataset, i.e., a dense network of tree-ring width series across the Czech Republic. However, the functions can be directly applied to any other regions of the world with available tree-ring width datasets. The most functions target period 1961-2010, since we found this period as an optimal balance between temporal span of the analysis and quality of the data (mainly climatic datasets). Deatils about the required inputs and the way to apply each functions are given as notes in the specific script. Some functions require a prior installation of open-source packages and extensions both in R and Octave languages. Required packages and extensions are indicated at the beggining of each script.
+The functions were developed and tested reflecting TreeDataClim dataset and methodology, i.e., a dense network of tree-ring width series across the Czech Republic. However, the functions can be directly applied to any other region of the world with available tree-ring width datasets. The most functions target period 1961-2010, since we found this period as an optimal balance between temporal span of the analysis and quality of the data (mainly availability of reliable climatic data). Details about the required inputs and the way to apply each function are given as annotations in the specific script. Some functions require a prior installation of open-source packages and extensions both in R and Octave languages. Required packages and extensions are indicated at the beggining of each script.
 
 ### Contact and bug reporting
 Jan Tumajer 
