@@ -1,4 +1,4 @@
-**Description of used approach**
+#Assessment of growth trends in basal area increment#
 
 The analysis of the main growth trends of tree species is based on the trends in the Basal area increment (BAI). Time series of BAI might be considered as a suitable proxy for stem biomass increments (Bošel’a et al., 2023). To calculate BAI from tree-ring width series for each tree, an R package dplR is used (Bunn, 2010) (Figure 1A,B). 
 
