@@ -12,6 +12,8 @@ The BAI is predicted using the parameterized GAMM models for each site for a spe
 
 **Cited literature**
 Bošel’a, M., Rubio-Cuadrado, Á., Marcis, P., Merganičová, K., Fleischer, P., Forrester, D. I., Uhl, E., Avdagić, A., Bellan, M., Bielak, K., Bravo, F., Coll, L., Cseke, K., del Rio, M., Dinca, L., Dobor, L., Drozdowski, S., Giammarchi, F., Gömöryová, E., … Tognetti, R. (2023). Empirical and process-based models predict enhanced beech growth in European mountains under climate change scenarios: A multimodel approach. Science of The Total Environment, 888, 164123. https://doi.org/10.1016/j.scitotenv.2023.164123
+
 Bunn, A. G. (2010). Statistical and visual crossdating in R using the dplR library. Dendrochronologia, 28(4), 251–258. https://doi.org/10.1016/j.dendro.2009.12.001
+
 Wood, S. N. (2011). Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 73(1), 3–36. https://doi.org/10.1111/j.1467-9868.2010.00749.x
 
