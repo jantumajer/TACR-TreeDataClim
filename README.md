@@ -13,7 +13,7 @@ Functions presented in this repository were developed for the assessment of grow
 ![obrazek](https://user-images.githubusercontent.com/25429975/235666459-c20a2ca5-748a-42ad-8c4c-44b9c8034a04.png)
 
 ### Acknowledgements and credits
-The repository contains scripts and functions developed under the project funded by TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu (Program Prostředí pro život)*.
+The repository contains scripts and functions developed under the project funded by TAČR SS03010134 *Tree-ring database as a tool for description and prediction of responses of the main forest tree species to climate change*.
 
 The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions use few publicly-available packages contributing to specific data processing steps and plotting charts. We are grateful to all authors of these packages for making them freely available.
 
