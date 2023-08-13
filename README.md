@@ -1,7 +1,7 @@
 # TreeDataClim Repository
 
 ### Team
-Functions presented in this repository were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in the [TreeDataClim database](https://treedataclim.cz/). The contributors of the data into this database include:
+Functions presented in this repository were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in the [TreeDataClim database](https://treedataclim.cz/en). The contributors of the data into this database include:
 - [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
 - [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
 - Forestry and Game Management Research Institute
