@@ -1,44 +1,44 @@
 # Software "TreeDataClim"
 
 ### Autorský kolektiv
-Functions presented in this repository were developed for the assessment of growth trends, patterns of climatic limitations, and the identification of extreme growth reductions for dominant forest tree species across the Czech Republic. Their functionality was designed for processing tree-ring width series stored in the [databázi TreeDataClim](https://treedataclim.cz/). The contributors of the data into this database include:
-- [Charles University, Faculty of Science, Working group of Dendroecology](https://web.natur.cuni.cz/physgeo/dendro/)
-- [Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team](https://pralesy.cz/lide)
-- Forestry and Game Management Research Institute
-- Mendel University in Brno, Faculty of Forestry and Wood Technology
-- [University of Life Science, Faculty of Forestry and Wood Science, Department of Forest Ecology](https://www.remoteforests.org/?language=en)
-- Institute of Botany of the Czech Academy of Sciences
-- Jan Evangelista Purkyně University, Faculty of Environment
+Funkce v tomto repozitáři byly vyvinuty pro hodnocení růstových trendů, intenzity klimatického limitování přírůstu a identifikaci extrémních růstových propadů pro nejvýznamnější druhy lesních dřevin na území České republiky. Jejich funkcionalita byla navržena pro zpracování letokruhových sérií (řad šířek letokruhů v jednotlivých letech) uložených v [databázi TreeDataClim](https://treedataclim.cz/). Mezi přispěvatele dat do této databáze patří především:
+- Univerzita Karlova, Přírodovědecká fakulta, laboratoř Dendroekologie](https://web.natur.cuni.cz/physgeo/dendro/).
+- [Oddělení ekologie lesa, Výzkumný ústav Silva Taroucy, tým Blue Cat](https://pralesy.cz/lide).
+- Výzkumný ústav lesního hospodářství a myslivosti
+- Mendelova univerzita v Brně, Lesnická a dřevařská fakulta.
+- [Česká zemědělská univerzita Praha, Lesnická a dřevařská fakulta, Katedra ekologie lesa](https://www.remoteforests.org/?language=en)
+- Botanický ústav Akademie věd České republiky [Botanický ústav AV ČR].
+- Univerzita Jana Evangelisty Purkyně v Ústí nad Labem, Fakulta životního prostředí
 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235666459-c20a2ca5-748a-42ad-8c4c-44b9c8034a04.png)
 
-### Acknowledgements and credits
-The repository contains scripts and functions developed under the project funded by TAČR SS03010134 *Tree-ring database as a tool for description and prediction of responses of the main forest tree species to climate change*.
+### Poděkování
+Repozitář obsahuje skripty a funkce vyvinuté v rámci projektu financovaného TAČR SS03010134 *Databáze letokruhových chronologií jako nástroj pro evidenci a predikci reakce hlavních lesních dřevin na klimatickou změnu*.
 
-The development of the modified version of the VS-Lite process-based model of wood formation was largely inspired by the work of Dr. Suzan Tolwinski-Ward, mainly by Octave codes of the original model made available at [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Similarly, individual R functions use few publicly-available packages contributing to specific data processing steps and plotting charts. We are grateful to all authors of these packages for making them freely available.
+Vývoj modifikované verze procesního modelu tvorby dřeva VS-Lite byl do značné míry inspirován prací Dr. Suzan Tolwinski-Ward, především kódy původního modelu v jazyce Octave, které jsou k dispozici na adrese [NOAA](https://www.ncei.noaa.gov/access/paleo-search/study/9894). Další funkce vyvinuté v prostředí R pro jednotlivé kroky zpracování dat a vykreslování grafů využívají několik veřejně dostupných balíčků . Autorům těchto balíčků děkujeme za jejich volné zpřístupnění.
 
-### Functionality
-This repository represents a compilation of stand-alone functions that were developed to process tree-ring width data following the methodology of the TreeDataClim project. The individual functions are grouped in following folders:
-- `Reductions`: functions to identify, evaluate, and extrapolate events of extreme growth reductions
-- `Limitations`: a process-based model of intra-annual wood formation and its application to assess the type and the intensity of climatic limitation of wood formation on an intra-annual scale
-- `Trends`: functions to quantify recent growth trends and to extrapolate their patterns across space
-- `Misc (aka miscellaneous)`: pre-processing of dendrometer data required for subsequent functions, plotting of climatic diagrams
+### Použití
+Tento repozitář představuje kompilaci samostatných funkcí, které byly vyvinuty ke zpracování letokruhových dat podle metodiky projektu TreeDataClim. Jednotlivé funkce jsou seskupeny v následujících složkách:
+- `Reductions`: funkce pro identifikaci, vyhodnocení a extrapolaci událostí extrémního snížení růstu
+- `Limitations`: procesní model dynamiky tvorby dřeva a jeho aplikace k posouzení typu a intenzity klimatického limitování tvorby dřeva v měsíčním kroku
+- `Trends`: funkce pro vyhodnocení růstových trendů a extrapolaci jejich prostorového rozsahu
+- `Misc (aka miscellaneous)`: funkce pro předzpracování dendrochronologických dat, vykreslování klimatických diagramů
 
-Each folder contains separate readme files explaining individual steps of the functions' application. Most functions were developed in [R language](https://www.r-project.org/) except the VS-Lite process-based model of wood formation, which is written in [Octave](https://octave.org/). Both languages are open-source. We recommend using the latest versions of both programming environments with our scripts.
+Každá složka obsahuje samostatné soubory readme detailně vysvětlující postup použití jednotlivých funkcí. Většina funkcí byla vytvořena v jazyce [R](https://www.r-project.org/) s výjimkou procesního modelu tvorby dřeva VS-Lite, který je napsán v jazyce [Octave](https://octave.org/). Oba jazyky jsou open-source. Pro aplikaci našich skriptů doporučujeme používat nejnovější verze obou programovacích prostředí.
 
-### Inputs
-Individual functions serve to process tree-ring width data following the methodology developed as a part of the TreeDataClim project. Individual inputs differ depending on each function and are indicated at the beginning of each script. The template of each input file can be found in the `Input` folder. This folder contains example data from 16 sites of two species (*Picea abies* and *Quercus robur*) distributed across the northern part of the Czech Republic.
+### Vstupní data
+Jednotlivé funkce slouží ke zpracování letokruhových dat podle metodiky vyvinuté v rámci projektu TreeDataClim. Nároky na vstupní data a jejich očekávaná struktura se liší podle jednotlivých funkcí a jsou specifikovány vždy na začátku každého skriptu. Příklad struktury každého vstupního souboru naleznete ve složce `Input`. Tato složka obsahuje ukázková data ze 16 lokalit dvou druhů (*Picea abies* a *Quercus robur*) rozmístěných v severní části České republiky.
 
-### Applicability
-The functions were developed and tested reflecting the TreeDataClim dataset and methodology, i.e., a dense network of tree-ring width series across the Czech Republic. However, the procedures can be directly applied to any other region of the world with available tree-ring width datasets. The functions' target period was 1961-2010 since we found this period as an optimal balance between the period of the analysis and the quality of the data (mainly the availability of reliable climatic data). Details about the required inputs and the way to apply each function are given as annotations in the specific script. Some functions require a prior installation of open-source packages and extensions both in R and Octave languages. Required packages and extensions are indicated at the beginning of each script.
+### Použití
+Funkce byly vyvinuty a testovány s ohledem na datovou sadu a metodiku TreeDataClim, tj. hustou síť časových řad šířek letokruhů na území České republiky. Jednotlivé funkce však lze přímo aplikovat na jakoukoli jinou oblast světa s dostupnými letokruhovými časovými řadami. Funkce analyzují růstové trendy, klimatické limitování přírůstu a prudké propady v přírůstu za období 1961-2010, které představuje v rámci TreeDataClim databáze optimální rovnováhu mezi počtem dostupných ploch a spolehlivostí klimatických veličin. Podrobnosti o požadovaných vstupech a způsobu použití jednotlivých funkcí jsou uvedeny jako anotace v konkrétním skriptu. Některé funkce vyžadují předchozí instalaci open-source balíčků a rozšíření jak v jazyce R, tak v jazyce Octave. Požadované balíčky a rozšíření jsou taktéž uvedeny na začátku každého skriptu.
 
-### Contact and bug reporting
+### Kontakt, hlášení chyb
 `Jan Tumajer` tumajerj@natur.cuni.cz
 
-Charles University, Faculty of Science, Department of Physical Geography and Geoecology, Albertov 6, 12843 Prague, Czech Republic
+Univerzita Karlova, Přírodovědecká fakulta, Katedra Fyzické Geografie a Geoekologie, Albertov 6, 12843 Praha, Česká Republika
 
 
 
 `Jakub Kašpar` kaspar@vukoz.cz
 
-Department of Forest Ecology, Silva Tarouca Research Institute, Blue Cat Team
+Oddělení ekologie lesa, Výzkumný ústav Silva Taroucy
