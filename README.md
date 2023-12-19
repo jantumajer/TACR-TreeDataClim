@@ -1,7 +1,7 @@
 ### Select language
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.md)
-[![cz](https://img.shields.io/badge/lang-cz-yellow.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.cz.md)
+- [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.md)
+- [![cz](https://img.shields.io/badge/lang-cz-yellow.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.cz.md)
 
 
 # TreeDataClim Repository
