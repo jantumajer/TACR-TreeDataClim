@@ -1,3 +1,10 @@
+### Výběr jazyka
+
+- English: [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.md)
+- Čeština: [![cz](https://img.shields.io/badge/lang-cz-yellow.svg)](https://github.com/jantumajer/TACR-TreeDataClim/blob/main/README.cz.md)
+
+
+
 # Software "TreeDataClim"
 
 ### Autorský kolektiv
