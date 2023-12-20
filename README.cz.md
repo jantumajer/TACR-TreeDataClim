@@ -9,7 +9,7 @@
 
 ### Autorský kolektiv
 Funkce v tomto repozitáři byly vyvinuty pro hodnocení růstových trendů, intenzity klimatického limitování přírůstu a identifikaci extrémních růstových propadů pro nejvýznamnější druhy lesních dřevin na území České republiky. Jejich funkcionalita byla navržena pro zpracování letokruhových sérií (řad šířek letokruhů v jednotlivých letech) uložených v [databázi TreeDataClim](https://treedataclim.cz/). Mezi přispěvatele dat do této databáze patří především:
-- Univerzita Karlova, Přírodovědecká fakulta, laboratoř Dendroekologie](https://web.natur.cuni.cz/physgeo/dendro/).
+- [Univerzita Karlova, Přírodovědecká fakulta, laboratoř Dendroekologie](https://web.natur.cuni.cz/physgeo/dendro/).
 - [Odbor ekologie lesa, Výzkumný ústav Silva Taroucy, tým Blue Cat](https://pralesy.cz/lide).
 - Výzkumný ústav lesního hospodářství a myslivosti
 - Mendelova univerzita v Brně, Lesnická a dřevařská fakulta.
