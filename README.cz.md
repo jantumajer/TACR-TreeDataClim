@@ -27,7 +27,7 @@ Vývoj modifikované verze procesního modelu tvorby dřeva VS-Lite byl do znač
 ### Použití
 Tento repozitář představuje kompilaci samostatných funkcí, které byly vyvinuty ke zpracování letokruhových dat podle metodiky projektu TreeDataClim. Jednotlivé funkce jsou seskupeny v následujících složkách:
 - `Reductions`: funkce pro identifikaci, vyhodnocení a extrapolaci událostí extrémního snížení růstu
-- `Limitations`: procesní model dynamiky tvorby dřeva a jeho aplikace k posouzení typu a intenzity klimatického limitování tvorby dřeva v měsíčním kroku
+- `Limitations`: procesní model dynamiky tvorby dřeva a jeho aplikace k hodnocení typu a intenzity klimatického limitování tvorby dřeva v měsíčním kroku
 - `Trends`: funkce pro vyhodnocení růstových trendů a extrapolaci jejich prostorového rozsahu
 - `Misc (aka miscellaneous)`: funkce pro předzpracování dendrochronologických dat, vykreslování klimatických diagramů
 
