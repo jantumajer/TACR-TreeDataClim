@@ -33,11 +33,10 @@ Tento repozitář představuje kompilaci samostatných funkcí, které byly vyvi
 
 Každá složka obsahuje samostatné soubory readme detailně vysvětlující postup použití jednotlivých funkcí. Většina funkcí byla vytvořena v jazyce [R](https://www.r-project.org/) s výjimkou procesního modelu tvorby dřeva VS-Lite, který je napsán v jazyce [Octave](https://octave.org/). Oba jazyky jsou open-source. Pro aplikaci našich skriptů doporučujeme používat nejnovější verze obou programovacích prostředí.
 
+Funkce byly vyvinuty a testovány s ohledem na datovou sadu a metodiku TreeDataClim, tj. hustou síť časových řad šířek letokruhů na území České republiky. Jednotlivé funkce však lze přímo aplikovat na jakoukoli jinou oblast světa s dostupnými letokruhovými časovými řadami. Funkce analyzují růstové trendy, klimatické limitování přírůstu a prudké propady v přírůstu za období 1961-2010, které představuje v rámci TreeDataClim databáze optimální rovnováhu mezi počtem dostupných ploch a spolehlivostí klimatických veličin. Podrobnosti o požadovaných vstupech a způsobu použití jednotlivých funkcí jsou uvedeny jako anotace v konkrétním skriptu. Některé funkce vyžadují předchozí instalaci open-source balíčků a rozšíření jak v jazyce R, tak v jazyce Octave. Požadované balíčky a rozšíření jsou taktéž uvedeny na začátku každého skriptu.
+
 ### Vstupní data
 Jednotlivé funkce slouží ke zpracování letokruhových dat podle metodiky vyvinuté v rámci projektu TreeDataClim. Nároky na vstupní data a jejich očekávaná struktura se liší podle jednotlivých funkcí a jsou specifikovány vždy na začátku každého skriptu. Příklad struktury každého vstupního souboru naleznete ve složce `Input`. Tato složka obsahuje ukázková data ze 16 lokalit dvou druhů (*Picea abies* a *Quercus robur*) rozmístěných v severní části České republiky.
-
-### Použití
-Funkce byly vyvinuty a testovány s ohledem na datovou sadu a metodiku TreeDataClim, tj. hustou síť časových řad šířek letokruhů na území České republiky. Jednotlivé funkce však lze přímo aplikovat na jakoukoli jinou oblast světa s dostupnými letokruhovými časovými řadami. Funkce analyzují růstové trendy, klimatické limitování přírůstu a prudké propady v přírůstu za období 1961-2010, které představuje v rámci TreeDataClim databáze optimální rovnováhu mezi počtem dostupných ploch a spolehlivostí klimatických veličin. Podrobnosti o požadovaných vstupech a způsobu použití jednotlivých funkcí jsou uvedeny jako anotace v konkrétním skriptu. Některé funkce vyžadují předchozí instalaci open-source balíčků a rozšíření jak v jazyce R, tak v jazyce Octave. Požadované balíčky a rozšíření jsou taktéž uvedeny na začátku každého skriptu.
 
 ### Kontakt, hlášení chyb
 `Jan Tumajer` tumajerj@natur.cuni.cz
