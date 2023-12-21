@@ -14,7 +14,7 @@ Funkce v tomto repozitáři byly vyvinuty pro hodnocení růstových trendů, in
 - Výzkumný ústav lesního hospodářství a myslivosti
 - Mendelova univerzita v Brně, Lesnická a dřevařská fakulta
 - [Česká zemědělská univerzita Praha, Lesnická a dřevařská fakulta, Katedra ekologie lesa](https://www.remoteforests.org/?language=en)
-- Botanický ústav Akademie věd České republiky [Botanický ústav AV ČR]
+- Botanický ústav Akademie věd České republiky
 - Univerzita Jana Evangelisty Purkyně v Ústí nad Labem, Fakulta životního prostředí
 
 ![obrazek](https://user-images.githubusercontent.com/25429975/235666459-c20a2ca5-748a-42ad-8c4c-44b9c8034a04.png)
